@@ -5,8 +5,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-      - uses: iterative/setup-cml@v1
+      - uses: iterative/setup-tools@v1
       - name: cml_run  
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
