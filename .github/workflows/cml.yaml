@@ -3,12 +3,12 @@ on: [push]
 jobs:
   run:
     runs-on: [ubuntu-latest]
-    containter: docker://dvcorg/cml-py3:latest
+    container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
       - name: cml_run
         env:
-          repo_token: $ {{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Your ML workflow goes here
           pip install -r requirements.txt
